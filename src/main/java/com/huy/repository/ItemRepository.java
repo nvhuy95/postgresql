@@ -15,13 +15,12 @@ public class ItemRepository {
 	@Autowired
 	JdbcTemplate jdbctemplate;
 
-	public List<select001Result> select001(String category) {
-		String query = "SELECT ITEM.ID , ITEM.NAME , CATEGORY.NAME AS CATEGORYNAME FROM ITEM INNER JOIN CATEGORY ON ITEM.ID = CATEGORY.ID WHERE ITEM.CATEGORY = ?";
-		List<select001Result> list = jdbctemplate.query(query, new Object[] { category },
-				new BeanPropertyRowMapper<select001Result>(select001Result.class));
+	public List<select001Result> select001() {
+		String query = "SELECT * FROM NOTE";
+		List<select001Result> list = jdbctemplate.query(query,new BeanPropertyRowMapper<select001Result>(select001Result.class));
 		return list;
 	}
-
+/*
 	public List<String> select002(String category) {
 		String query = "SELECT NAME FROM ITEM WHERE CATEGORY = ?";
 		List<String> list = jdbctemplate.queryForList(query, new Object[] { category }, String.class);
@@ -32,5 +31,5 @@ public class ItemRepository {
 		String query = "SELECT NAME FROM ITEM WHERE ID = ?";
 		String item = jdbctemplate.queryForObject(query, new Object[] { id }, String.class);
 		return item;
-	}
+	}*/
 }

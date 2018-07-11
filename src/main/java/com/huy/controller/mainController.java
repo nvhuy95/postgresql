@@ -13,33 +13,10 @@ public class mainController {
 	@Autowired
 	ItemRepository itemrepository;
 
-	@GetMapping("/note")
+	@GetMapping("/")
 	public String note(Model model) {
-		return "note";
-	}
-	
-	@GetMapping("/select001")
-	public String select001(Model model) {
-		model.addAttribute("items", itemrepository.select001("1"));
-		return "select001";
-	}
-
-	@GetMapping("/select002")
-	public String select002(Model model) {
-		model.addAttribute("items", itemrepository.select002("1"));
-		return "select002";
-	}
-
-	@GetMapping("/select003")
-	public String select003(Model model) {
-		model.addAttribute("item", itemrepository.select001("1").get(0));
-		return "select003";
-	}
-
-	@GetMapping("/select004")
-	public String select004(Model model) {
-		model.addAttribute("item", itemrepository.select004(1));
-		return "select004";
+		model.addAttribute("items", itemrepository.select001());
+		return "index";
 	}
 
 }

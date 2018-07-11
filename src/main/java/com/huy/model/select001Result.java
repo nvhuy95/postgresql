@@ -2,8 +2,9 @@ package com.huy.model;
 
 public class select001Result {
 	private int id;
-	private String name;
-	private String categoryname;
+	private String title;
+	private String content;
+	private String crdate;
 
 	public select001Result() {
 	}
@@ -16,20 +17,27 @@ public class select001Result {
 		this.id = id;
 	}
 
-	public String getName() {
-		return name;
+	public String getTitle() {
+		return title;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setTitle(String title) {
+		this.title = title;
 	}
 
-	public String getCategoryname() {
-		return categoryname;
+	public String getContent() {
+		return content;
 	}
 
-	public void setCategoryname(String categoryname) {
-		this.categoryname = categoryname;
+	public void setContent(String content) {
+		this.content = content;
 	}
 
+	public String getCrdate() {
+		return crdate;
+	}
+
+	public void setCrdate(String crdate) {
+		this.crdate = crdate;
+	}
 }
