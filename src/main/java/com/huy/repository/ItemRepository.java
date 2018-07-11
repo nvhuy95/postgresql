@@ -20,6 +20,11 @@ public class ItemRepository {
 		List<select001Result> list = jdbctemplate.query(query,new BeanPropertyRowMapper<select001Result>(select001Result.class));
 		return list;
 	}
+	
+	public void update001(int id, String content) {
+		String query = "UPDATE NOTE SET CONTENT = ? WHERE ID = ?";
+		jdbctemplate.update(query, content, id);
+	}
 /*
 	public List<String> select002(String category) {
 		String query = "SELECT NAME FROM ITEM WHERE CATEGORY = ?";

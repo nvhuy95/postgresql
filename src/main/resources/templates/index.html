@@ -31,7 +31,7 @@
 
 	<!-- ****** Breadcumb Area Start ****** -->
 	<div class="breadcumb-area"
-		style="background-image: url(img/bg-img/breadcumb.jpg);">
+		style="background-image: url(../img/bg-img/breadcumb.jpg);">
 		<div class="container h-100">
 			<div class="row h-100 align-items-center">
 				<div class="col-12">
@@ -55,7 +55,8 @@
 					<div class="single-post wow fadeInUp" data-wow-delay="0.1s">
 						<!-- Post Thumb -->
 						<div class="post-thumb">
-							<textarea th:text="${item.content}" rows="15" cols="42" maxlength="100"></textarea>
+							<textarea id="content" th:text="${item.content}" rows="15"
+								cols="42" maxlength="100"></textarea>
 						</div>
 						<!-- Post Content -->
 						<div class="post-content">
@@ -67,7 +68,7 @@
 									</div>
 								</div>
 							</div>
-							<a href="#">
+							<a th:href="@{/save/{id}/{content}(id=${item.id},content=testvalue)}">
 								<h4 class="post-headline" th:text="${item.title}"></h4>
 							</a>
 						</div>
