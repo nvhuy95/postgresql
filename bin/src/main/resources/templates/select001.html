@@ -1,0 +1,9 @@
+<html>
+Data <br/>
+<tr th:each="item,iterStat : ${items}">
+	<td th:text="${item.id}"></td>
+	<td th:text="${item.name}"></td>
+	<td th:text="${item.categoryname}"></td>
+	<br/>
+</tr>
+</html>
