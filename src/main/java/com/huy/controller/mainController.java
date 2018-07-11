@@ -13,6 +13,11 @@ public class mainController {
 	@Autowired
 	ItemRepository itemrepository;
 
+	@GetMapping("/note")
+	public String note(Model model) {
+		return "note";
+	}
+	
 	@GetMapping("/select001")
 	public String select001(Model model) {
 		model.addAttribute("items", itemrepository.select001("1"));

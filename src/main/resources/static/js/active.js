@@ -7,7 +7,7 @@
             items: 4,
             loop: true,
             autoplay: true,
-            smartSpeed: 1500,
+            smartSpeed: 500,
             margin: 10,
             nav: true,
             navText: ['', ''],
@@ -31,7 +31,7 @@
             items: 6,
             loop: true,
             autoplay: true,
-            smartSpeed: 800,
+            smartSpeed: 500,
             nav: true,
             navText: ['', ''],
             responsive: {
@@ -60,7 +60,7 @@
             items: 3,
             loop: true,
             autoplay: true,
-            smartSpeed: 800,
+            smartSpeed: 500,
             nav: true,
             margin: 30,
             navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>', '<i class="fa fa-angle-right" aria-hidden="true"></i>'],
@@ -81,7 +81,7 @@
     // :: 4.0 ScrollUp Active JS
     if ($.fn.scrollUp) {
         $.scrollUp({
-            scrollSpeed: 1500,
+            scrollSpeed: 500,
             scrollText: '<i class="fa fa-arrow-up" aria-hidden="true"></i>'
         });
     }
@@ -90,7 +90,7 @@
     if ($.fn.counterUp) {
         $('.counter').counterUp({
             delay: 10,
-            time: 2000
+            time: 500
         });
     }
 
